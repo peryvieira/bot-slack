@@ -1,1 +1,7 @@
-
+slack:
+  url: "https://hooks.slack.com/services/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"
+  max-conn: 40
+  max-per-route: 20
+  read-timeout: 30000
+  conn-timeout: 30000
+  conn-ttl: 120000

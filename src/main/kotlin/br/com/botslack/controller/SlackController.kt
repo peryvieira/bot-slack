@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/message")
-    class SlackController (
-private val slackNotificationService: SlackNotificationService)
-{
-
+class SlackController(
+    private val slackNotificationService: SlackNotificationService
+) {
     @PostMapping
-    fun sendMessage(@RequestBody messageDTO: MessageDTO) :ResponseEntity<String> {
+    fun sendMessage(@RequestBody messageDTO: MessageDTO): ResponseEntity<String> {
         slackNotificationService.notifySlack(messageDTO.message)
         return ResponseEntity.ok("enviado")
     }
