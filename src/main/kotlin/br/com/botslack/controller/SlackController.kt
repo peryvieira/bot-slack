@@ -16,6 +16,6 @@ class SlackController(
     @PostMapping
     fun sendMessage(@RequestBody messageDTO: MessageDTO): ResponseEntity<String> {
         slackNotificationService.notifySlack(messageDTO.message)
-        return ResponseEntity.ok("enviado")
+        return ResponseEntity.ok("enviado ")
     }
 }
