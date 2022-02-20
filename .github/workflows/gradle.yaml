@@ -10,6 +10,6 @@ jobs:
         with:
           java-version: 11
           distribution: 'adopt'
-      - uses: gradle/gradle-build-actions@v2
+      - uses: gradle/gradle-build-action@v2
         with:
           arguments: build
